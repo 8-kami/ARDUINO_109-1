@@ -9,7 +9,7 @@ void setup()
 void loop()
 
 *腳位模式*
-pinMode(3, OUTPUT)      //INPUT初始值=1,OUTPUT初始值=0
+pinMode(3, OUTPUT)      //INPUT初始值=1, OUTPUT初始值=0
 
 *寫入電位*
 digitalWrite(3, HIGH)
@@ -17,5 +17,11 @@ digitalWrite(3, LOW)
 
 *等待*
 delay(500)
+
+__第一個程式,功能LED閃爍0.5s
+![image](USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg)
+
+
+__2020.9.1__
 
       
