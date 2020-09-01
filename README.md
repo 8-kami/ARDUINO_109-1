@@ -19,7 +19,7 @@ digitalWrite(3, LOW)
 delay(500)
 
 __第一個程式　功能：LED閃爍0.5s，電路圖如下__
-![image](USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg)
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg)
 
 
 __2020.9.1__
