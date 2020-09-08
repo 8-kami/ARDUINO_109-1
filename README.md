@@ -2,8 +2,8 @@
 ARDUINOmemo </p>
 <h3> 學習ARDUINO 的過程 </h3>
 
-*初始設定，只執行一次* 
-void setup() </p>
+*初始設定，只執行一次* </p>
+void setup() 
 
 *主程式，會重複執行*
 void loop() 
