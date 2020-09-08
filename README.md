@@ -17,7 +17,7 @@ digitalWrite(3, LOW)
 
 *等待* 
 delay(500) 
-</p>
+
 __第一個程式　功能：LED閃爍(亮0.5s 熄0.5s)__ 
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg)
