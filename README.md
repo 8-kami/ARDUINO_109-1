@@ -34,13 +34,13 @@ void loop() {
       
 } 
 ```
-</p>
+
 電路圖如下：
-![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg)
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg) </p>
 
 __2020.9.1__ </p>
 __四顆LED同時亮滅__ </p>
 電路圖如下：
-![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200908.jpg)
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200908.jpg) </p>
 
 __2020.9.8__ </p>
