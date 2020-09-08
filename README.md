@@ -19,7 +19,7 @@ digitalWrite(3, LOW)
 delay(500) 
 
 __第一個程式　功能：LED閃爍(亮0.5s 熄0.5s)__ </p>
-```c++
+‵‵‵c++
 void setup() {
   // put your setup code here, to run once:
   pinMode(3, OUTPUT);
@@ -32,7 +32,7 @@ void loop() {
       digitalWrite(3, LOW);
       delay(500);
       
-}``` 
+}‵‵‵
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg)
 
