@@ -40,6 +40,25 @@ void loop() {
 
 __2020.9.1__ </p>
 __四顆LED同時亮滅__ </p>
+```c++
+int i;
+void setup() {
+  // put your setup code here, to run once:
+for(i=2; i<6; i++)
+  pinMode(i, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  for(i=2; i<6; i++)
+  digitalWrite(i, HIGH);
+  delay(500);
+  for(i=2; i<6; i++)
+  digitalWrite(i, LOW);
+  delay(500);  
+}
+```
+
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200908.jpg) </p>
 
