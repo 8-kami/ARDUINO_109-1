@@ -93,7 +93,7 @@ Step5.○○○● </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-1.jpg) </p>
 
-<h5> __增至八顆LED__ </h5></p>
+__增至八顆LED__ </p>
 ```c++
 int i;
 int LED = 9;
