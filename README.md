@@ -93,7 +93,7 @@ Step5.○○○● </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-1.jpg) </p>
 
-__增至八顆LED 由左至右，逐一亮滅__ </p>
+__第四個程式 功能：增至八顆LED 由左至右，逐一亮滅__ </p>
 ```c++
 int i;
 int LED = 9;
@@ -113,12 +113,12 @@ void loop() {
   delay(500);  
 }
 ```
-Step1.○○○○○○○○ </p>
-Step2.●○○○○○○○ </p>
-Step3.○●○○○○○○ </p>
-Step4.○○●○○○○○ </p>
-Step5.○○○●○○○○ </p>
-Step6.○○○○●○○○ </p>
+Step1. ○○○○○○○○ </p>
+Step2. ●○○○○○○○ </p>
+Step3. ○●○○○○○○ </p>
+Step4. ○○●○○○○○ </p>
+Step5. ○○○●○○○○ </p>
+Step6. ○○○○●○○○ </p>
 Step7. ○○○○○●○○ </p>
 Step8. ○○○○○○●○ </p>
 Step9. ○○○○○○○● </p>
@@ -164,3 +164,32 @@ Step9. ●○○○○○○○ </p>
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-4.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-5.jpg) </p>
+
+
+__第五個程式　功能：呼吸燈__ </p>
+```c++
+int i;
+int l=0;
+int add=5;
+void setup() {
+ pinMode(3, OUTPUT);
+}
+ 
+void loop() { 
+  analogWrite(3,l);
+  l=l+add;
+    if(l == 0)
+    {
+      add=-add;
+    }
+    if(l == 255)
+    {
+      add=-add;
+    }
+  delay(30);
+}
+```
+*類比輸出寫法* </p>
+analogWrite(腳位,值)
+
+//腳位必要有~符號、值0-255 </>
