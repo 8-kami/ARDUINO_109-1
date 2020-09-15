@@ -125,7 +125,42 @@ Step9. ○○○○○○○● </p>
 ↑BACK TO Step1. </p>
 
 
-
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-2.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-3.jpg) </p>
+
+__增至八顆LED 由右至左，逐一亮滅__ </p>
+```c++
+int i;
+int LED = 2;
+void setup() {
+for(i=2; i<10; i++)
+  pinMode(i, OUTPUT);
+}
+ 
+void loop() {
+  for(i=2; i<10 ;i++)
+    digitalWrite(i, HIGH);
+  if (LED<=9)
+    digitalWrite(LED, LOW);
+  else
+    LED=1;
+  LED++;
+  delay(500);  
+}
+```
+Step1. ○○○○○○○○ </p>
+Step2. ○○○○○○○● </p>
+Step3. ○○○○○○●○ </p>
+Step4. ○○○○○●○○ </p>
+Step5. ○○○○●○○○ </p>
+Step6. ○○○●○○○○ </p>
+Step7. ○○●○○○○○ </p>
+Step8. ○●○○○○○○ </p>
+Step9. ●○○○○○○○ </p>
+↑BACK TO Step1. </p>
+
+
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-4.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-5.jpg) </p>
