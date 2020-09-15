@@ -93,7 +93,7 @@ Step5.○○○● </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-1.jpg) </p>
 
-__增至八顆LED__ </p>
+__增至八顆LED 由左至右，逐一亮滅__ </p>
 ```c++
 int i;
 int LED = 9;
@@ -123,3 +123,9 @@ Step7. ○○○○○●○○ </p>
 Step8. ○○○○○○●○ </p>
 Step9. ○○○○○○○● </p>
 ↑BACK TO Step1. </p>
+
+
+
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-2.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-3.jpg) </p>
