@@ -169,8 +169,8 @@ Step9. ●○○○○○○○ </p>
 __第五個程式　功能：呼吸燈__ </p>
 ```c++
 int i;
-int l=0;
-int add=15;
+int l=255;
+int add=-15;
 void setup() {
  pinMode(3, OUTPUT);
 }
@@ -192,8 +192,8 @@ void loop() {
 or
 ```c++
 int i;
-int l=0;
-int add=15;
+int l=255;
+int add=-15;
 void setup() {
  pinMode(3, OUTPUT);
 }
@@ -211,7 +211,7 @@ void loop() {
 *類比輸出寫法* </p>
 analogWrite(腳位,值)
 
-//腳位必要有~符號,值0-255 </p>
+//腳位必要有~符號,值(亮)0-255(暗) </p>
 //！建議！亮度增加值l整除255 </p>
 
 
