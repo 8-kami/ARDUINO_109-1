@@ -39,17 +39,15 @@ void loop() {
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/USER_SCOPED_TEMP_DATA_orca-image--1870013025.jpeg) </p>
 
 __2020.9.1__ </p>
-__四顆LED同時亮滅__ </p>
+__第二個程式 功能：四顆LED同時亮滅__ </p>
 ```c++
 int i;
 void setup() {
-  // put your setup code here, to run once:
 for(i=2; i<6; i++)
   pinMode(i, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   for(i=2; i<6; i++)
   digitalWrite(i, HIGH);
   delay(500);
@@ -63,3 +61,34 @@ void loop() {
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200908.jpg) </p>
 
 __2020.9.8__ </p>
+__第三個程式 功能：四顆LED由左至右，逐一亮滅__ </p>
+```c++
+int i;
+int LED = 5;
+void setup() {
+for(i=2; i<6; i++)
+  pinMode(i, OUTPUT);
+}
+ 
+void loop() {
+  for(i=5; i>1 ;i--)
+    digitalWrite(i, HIGH);
+  if (LED>=2)
+    digitalWrite(LED, LOW);
+  else
+    LED=6;
+  LED--;
+  delay(500);  
+}
+```
+Step1.○○○○
+Step2.●○○○
+Step3.○●○○
+Step4.○○●○
+Step5.○○○●
+↑BACK TO Step1.
+
+
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-1.jpg) </p>
