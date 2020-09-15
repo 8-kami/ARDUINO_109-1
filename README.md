@@ -81,7 +81,7 @@ void loop() {
   delay(500);  
 }
 ```
-Step1.○○○○ </p>
+Step1.○○○○ [初始]</p>
 Step2.●○○○ </p>
 Step3.○●○○ </p>
 Step4.○○●○ </p>
