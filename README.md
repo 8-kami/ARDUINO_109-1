@@ -81,12 +81,12 @@ void loop() {
   delay(500);  
 }
 ```
-Step1.○○○○
-Step2.●○○○
-Step3.○●○○
-Step4.○○●○
-Step5.○○○●
-↑BACK TO Step1.
+Step1.○○○○ </p>
+Step2.●○○○ </p>
+Step3.○●○○ </p>
+Step4.○○●○ </p>
+Step5.○○○● </p>
+↑BACK TO Step1. </p>
 
 
 電路圖如下：
