@@ -217,5 +217,5 @@ analogWrite(腳位,值)
 
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/200915-6.jpg) </p>
-![image]https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-7.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-7.jpg) </p>
 
