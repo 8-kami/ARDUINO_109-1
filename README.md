@@ -170,7 +170,7 @@ __第五個程式　功能：呼吸燈__ </p>
 ```c++
 int i;
 int l=0;
-int add=5;
+int add=15;
 void setup() {
  pinMode(3, OUTPUT);
 }
@@ -189,7 +189,33 @@ void loop() {
   delay(30);
 }
 ```
+or
+```c++
+int i;
+int l=0;
+int add=15;
+void setup() {
+ pinMode(3, OUTPUT);
+}
+ 
+void loop() { 
+  analogWrite(3,l);
+  l=l+add;
+    if(l == 0|| l == 255)
+    {
+      add=-add;
+    }
+  delay(30);
+}
+```
 *類比輸出寫法* </p>
 analogWrite(腳位,值)
 
-//腳位必要有~符號、值0-255 </p>
+//腳位必要有~符號,值0-255 </p>
+//！建議！亮度增加值l整除255 </p>
+
+
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-６.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-７.jpg) </p>
+
