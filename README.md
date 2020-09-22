@@ -219,3 +219,27 @@ analogWrite(腳位,值)
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/200915-6.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-7.jpg) </p>
 
+__2020.9.15__ </p>
+
+
+__按鈕開關(Tack Switch)測試__ </p
+```c++
+void setup() {
+  pinMode(2, INPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop() {
+  if(digitalRead(2)==1)
+  {
+    digitalWrite(4,HIGH);
+    }
+  else
+  {
+    digitalWrite(4,LOW);
+    }
+}
+```
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-1.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-2.jpg) </p>
