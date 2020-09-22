@@ -166,7 +166,7 @@ Step9. ●○○○○○○○ </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200915-5.jpg) </p>
 
 
-__第五個程式　功能：呼吸燈__ </p>
+__第4+1個程式　功能：呼吸燈__ </p>
 ```c++
 int i;
 int l=255;
@@ -222,19 +222,16 @@ analogWrite(腳位,值)
 __2020.9.15__ </p>
 
 
-__按鈕開關(Tack Switch)測試__ </p
+___第5個程式 按鈕開關(Tack Switch)__ </p
 ```c++
 void setup() {
   pinMode(2, INPUT);
   pinMode(4, OUTPUT);
+  digitalWrite(4, HIGH); //
 }
 
 void loop() {
-  if(digitalRead(2)==1)
-  {
-    digitalWrite(4,HIGH);
-    }
-  else
+  if(digitalRead(2)==0)
   {
     digitalWrite(4,LOW);
     }
