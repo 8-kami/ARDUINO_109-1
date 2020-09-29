@@ -241,7 +241,7 @@ void loop() {
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-1.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-2.jpg) </p>
 
-___按鈕開關(Tack Switch)_點擊一下亮、再點一次熄燈__ </p>
+___按鈕開關(Tack Switch) 點擊一下亮、再點一次熄燈__ </p>
 ```c++
 int  a= 0;
 void setup() {
@@ -269,8 +269,8 @@ void loop() {
 }
 ```
 電路圖如下：
-![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/200929-1.jpg) </p>
-![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200929-2.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/200929_1.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200929_2.jpg) </p>
 
 __2020.9.22__ </p>
 
