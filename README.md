@@ -222,7 +222,7 @@ analogWrite(腳位,值)
 __2020.9.15__ </p>
 
 
-___第5個程式 按鈕開關(Tack Switch)__ </p>
+__第5個程式 按鈕開關(Tack Switch)__ </p>
 ```c++
 void setup() {
   pinMode(2, INPUT);
@@ -241,7 +241,7 @@ void loop() {
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-1.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-2.jpg) </p>
 
-___按鈕開關(Tack Switch) 點擊一下亮、再點一次熄燈__ </p>
+__按鈕開關(Tack Switch) 點擊一下亮、再點一次熄燈__ </p>
 ```c++
 int  a= 0;
 void setup() {
@@ -269,8 +269,73 @@ void loop() {
 }
 ```
 電路圖如下：
-![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/200929_1.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200929_1.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200929_2.jpg) </p>
 
 __2020.9.22__ </p>
 
+
+__第6個程式 按鈕開關(Tack Switch) 功能：以按鈕開關控制LED燈__ </p>
+__step1由左往右一一點燃,step2由右往左一一點燃,step3全部熄滅__ </p>
+```c++
+int a= 0;
+int i;
+int LED = 12;
+int LED2 = 4;
+void setup() {
+  
+  pinMode(3, INPUT);
+  for(i=4; i<12; i++)
+    pinMode(i, OUTPUT);
+    digitalWrite(i,HIGH);
+}
+
+void loop() {
+  if(digitalRead(3)==LOW){
+
+    while(digitalRead(3)==LOW);
+    a=(a+1)%3; //1.2.0
+
+  }  
+  switch(a)
+  {
+    
+    case 0:
+    {     
+     for(i=12; i>3 ;i--)
+        digitalWrite(i, HIGH);
+     if (LED>=3)
+        digitalWrite(LED, LOW);
+     else
+        LED=13;
+     LED--;
+     delay(500);
+     break;
+    }   
+    case 1:
+    {
+     for(i=4; i<12 ;i++)
+         digitalWrite(i, HIGH);
+     if (LED2<=12)
+        digitalWrite(LED2, LOW);
+     else
+        LED2=3;
+      LED2++;
+     delay(500);  
+     break;      
+    }
+    case 2:
+    {  
+     for(i=4;i<12;i++)
+     digitalWrite(i, HIGH);
+     delay(100);
+     break; 
+    }
+  
+  }
+    
+}
+```
+
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200929_3.jpg) </p>
