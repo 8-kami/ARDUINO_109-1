@@ -222,7 +222,7 @@ analogWrite(腳位,值)
 __2020.9.15__ </p>
 
 
-___第5個程式 按鈕開關(Tack Switch)__ </p
+___第5個程式 按鈕開關(Tack Switch)__ </p>
 ```c++
 void setup() {
   pinMode(2, INPUT);
@@ -240,3 +240,37 @@ void loop() {
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-1.jpg) </p>
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200922-2.jpg) </p>
+
+___按鈕開關(Tack Switch)_點擊一下亮、再點一次熄燈__ </p>
+```c++
+int  a= 0;
+void setup() {
+  
+  pinMode(3, INPUT);
+  pinMode(4, OUTPUT);
+  digitalWrite(4,HIGH);
+}
+
+void loop() {
+  if(digitalRead(3)==LOW){
+
+    while(digitalRead(3)==LOW);
+    a=(a+1)%2;
+  }  
+  switch(a)
+  {
+    
+    case 0:
+    {digitalWrite(4,LOW);}
+    case 1:
+    {digitalWrite(4,HIGH);}
+ 
+    }
+}
+```
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/200929-1.jpg) </p>
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200929-2.jpg) </p>
+
+__2020.9.22__ </p>
+
