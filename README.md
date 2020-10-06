@@ -428,3 +428,7 @@ void setColor(int red, int green, int blue) //副程式
   analogWrite(bp, blue);
 }
 ```
+
+
+電路圖如下：
+![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20201006_1.jpg) </p>
