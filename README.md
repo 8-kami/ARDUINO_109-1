@@ -340,47 +340,85 @@ void loop() {
 電路圖如下：
 ![image](https://github.com/8-kami/ARDUINO_109-1/blob/master/20200929_3.jpg) </p>
 
+__第7個程式 按鈕控制三個功能：__ </p>
+
+__一：自動切換三色LED燈__ </p>
+__二：呼吸燈__ </p>
+__三：切換LED六種顏色__ </p>
+
+```c++
+int ctrlr,ctrlg,ctrlb;
 int rp = 9;
 int gp = 10;
 int bp = 11;
-int b=180;
-int add=-20;
-int x=0;
-int ctrlr,ctrlg,ctrlb;
+int l=180;
+int add=-10;
+int x,y,z=0;
+
 void setup() {
   pinMode(2, INPUT);
   pinMode(3, INPUT);
+  pinMode(4, INPUT);  
   for(int i=9; i<12; i++)
-    pinMode(i, OUTPUT);
+    pinMode(i, OUTPUT);  
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);  
 }
 
 void loop() {
-  if(digitalRead(3)==LOW)
+  if(digitalRead(3)==LOW) //切換LED六種顏色
   {
     while(digitalRead(3)==LOW);
     x=(x+1)%6;  //1,2,3,4,5,0
-    switch(x)
-    {
-    case 0:{ctrlr =180;ctrlg =0;ctrlb =0;break;} 
-    case 1:{ctrlg =180;ctrlr =0;ctrlb =0;break;} 
-    case 2:{ctrlb =180;ctrlr =0;ctrlg =0;break;} 
-    case 3:{ctrlr =180;ctrlg =180;ctrlb =0;break;} 
-    case 4:{ctrlr =180;ctrlg =0;ctrlb =180;break;} 
-    case 5:{ctrlr =0;ctrlg =180;ctrlb =180;break;} 
-    }  
-    setColor(ctrlr, ctrlg, ctrlb);
   }
-  if(digitalRead(2)==LOW)
+     switch(x)
+    {
+    case 0:{ctrlr =180;ctrlg =0;ctrlb =0;setColor(ctrlr, ctrlg, ctrlb);break;} 
+    case 1:{ctrlg =180;ctrlr =0;ctrlb =0;setColor(ctrlr, ctrlg, ctrlb);break;} 
+    case 2:{ctrlb =180;ctrlr =0;ctrlg =0;setColor(ctrlr, ctrlg, ctrlb);break;} 
+    case 3:{ctrlr =180;ctrlg =180;ctrlb =0;setColor(ctrlr, ctrlg, ctrlb);break;} 
+    case 4:{ctrlr =180;ctrlg =0;ctrlb =180;setColor(ctrlr, ctrlg, ctrlb);break;} 
+    case 5:{ctrlr =0;ctrlg =180;ctrlb =180;setColor(ctrlr, ctrlg, ctrlb);break;} 
+    }  
+    
+  if(digitalRead(2)==LOW)  //呼吸燈
   {
-    while(digitalRead(2)==LOW);  
-    setColor(b, ctrlg, ctrlb);
-    b=b+add;
-    if(b == 0 || b == 180)
+    while(digitalRead(2)==LOW);
+    y=(y+1)%2;
+  }    
+  switch(y)
+  {
+    case 0:
+    {
+    setColor(l, ctrlg, ctrlb);
+    l=l+add;
+    if(l == 0 || l == 180)
     {
        add=-add;
     }
-  delay(30);
-  }
+    delay(30);
+    break;
+    }
+    case 1:
+    {digitalWrite(2, HIGH);delay(100);break;}
+  }   
+  if(digitalRead(4)==LOW)  //自動切換三色LED燈
+  {
+    while(digitalRead(4)==LOW);
+    z=(z+1)%2;
+  } 
+    switch(z)
+  {
+    case 0:
+    {
+    setColor(80, 0, 0);delay(500);
+    setColor(0, 80, 0);delay(500);
+    setColor(0, 0, 80);delay(500);break;}
+    case 1:
+    {digitalWrite(4, HIGH);delay(100);break;}
+  }   
+
 }
 
 void setColor(int red, int green, int blue) //副程式
@@ -389,3 +427,4 @@ void setColor(int red, int green, int blue) //副程式
   analogWrite(gp, green);  
   analogWrite(bp, blue);
 }
+```
